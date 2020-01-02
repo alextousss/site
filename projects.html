@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    {% include "./head.html" %}
+    <body>
+        <div class="container-fluid"> 
+            <div class="row mt-3">
+                <div class="col-sm-10 order-12 order-sm-1">
+                    <div class="container">
+                        <h5>Alex Toussaint</h5>
+                       <br/><br/>
+                        Here's what keeps me busy at night:<br/><br/>
+                        
+                        
+                        <p class="h5">Things that make money 😉</p>
+                        I've co-founded <a href="https://kaktana.com">Kaktana</a>, a SaaS to create crypto trading bots with no programming knowledge.<br/>
+                        It led me to build custom trading bots for wealthy individuals.<br/><br/>
+                        <img src="images/turtlekaktana.png" style="max-width: 100%; overflow-x: scroll;" class="img-fluid"/>
+                        <br/><br/>
+                        
+                        <p class="h5 mt-3">Robotics </p>
+                        <a href="https://github.com/alextousss/ballfinder">Ballfinder</a> (school project) a robotic arm controlled by the wearer's arm moves + computer vision. When the wearer closes his hand (detected by ECG), the robotic arm tries to find a ball and to catch it using computer vision. The robotic arm is a toy. We had to enslave it with an arduino and H-drives.<br/>
+                        Explanation of the computer video pipeline in this <a href="https://twitter.com/alextoussss/status/1134457503268462598"> twitter thread</a> (french but with lots of pics). <br/>
+
+                        <video  class="zoomable figure-img" height=240" width="320" controls>
+                            <source src="images/videoballfinder.mp4" type="video/mp4">
+                            
+                        </video>
+                        
+                        <p class="h5 mt-3">AI 😲</p>
+                        I've built <a href="https://github.com/alextousss/wargames">wargames</a>, a game where two AIs compete with each other and advance with a genetic algorithm. (Python)
+                        
+                        <p class="h5 mt-3">Graphics</p>
+                        <a href="https://github.com/alextousss/pyWireframeRenderer">pyWireframeRenderer</a>, a complete 3D pipeline with only Numpy and Pygame (2D graphics). <br/><br/> 
+                        <figure class="figure mt-1">
+                            <img src="https://raw.githubusercontent.com/belzebalex/pyWireframeRenderer/master/images/teapot.png" class="zoomable figure-img" style="max-width: 300px" />
+                            <figcaption class="figure-caption text-center">Click to zoom.</figcaption>
+                        </figure>
+                        <figure class="figure mt-1">
+                            <img src="https://raw.githubusercontent.com/belzebalex/pyWireframeRenderer/master/images/cube_demo.png" class="zoomable figure-img" style="max-width: 300px" />
+                            <figcaption class="figure-caption text-center">Click to zoom.</figcaption>
+                        </figure>
+
+
+                        <p class="h5 mt-3">Physics </p>
+                        <a href="https://github.com/alextousss/wave-sim">Wave-Sim</a> a 2D interference simulation to understand phased array beams (the technique used for fighter jet radars) (C++)
+                        <figure class="figure mt-1">
+                            <img src="https://camo.githubusercontent.com/76b949ffb8641579fa5aa0f4c988e9e30c4fd995/68747470733a2f2f692e696d6775722e636f6d2f413064455641512e706e67" class="zoomable figure-img" style="max-width: 300px" />
+                            <figcaption class="figure-caption text-center">Click to zoom.</figcaption>
+                        </figure>
+
+
+                        <p class="h5">Things that fly</p>
+                        I've built numerous model planes, and even my own <a href="https://github.com/alextousss/quadcopter">quadcopter</a> (stabilization code in C++ included, at 14yo) from scratch. <br/><br/>
+                        On summer 2018, I've launched with friends at a summer camp a high-altitude baloon. We designed the hardware onboard and a control mechanism to trigger a 360° camera. Here are the most <a href="https://roundme.com/tour/293827/view/929818/">breathtaking pictures</a>.<br/>
+                        <figure class="figure mt-1">
+                            <img src="images/balon.jpg" class="zoomable figure-img" style="max-width: 300px" />
+                            <figcaption class="figure-caption text-center">Click to zoom.</figcaption>
+                        </figure>
+                        <p class="h5 mt-3">+ many other things</p>
+                        I invite you to check out my <a href="https://github.com/alextousss">github</a>.<br/><br/>
+
+                        If you have any questions, feel free to send me an email <a href="mailto://me@alextoussaint.com">me@alextoussaint.com</a>.                       
+                    <div class="mt-5"></div>
+                    </div>
+                </div>
+                <div class="col-sm-2 order-1 order-sm-12">
+                    {% include "./nav.html" %}
+                </div>
+            </div>
+        </div> 
+        <script
+            type="text/javascript"
+            src="https://unpkg.com/medium-zoom@1.0.4/dist/medium-zoom.min.js"
+        ></script>
+        <script type="text/javascript">
+            mediumZoom(".zoomable")
+        </script>
+
+    </body>
+</html>
