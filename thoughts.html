@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    {% include "./head.html" %}
+    <body>
+        <div class="container-fluid mt-3"> 
+            <div class="row">
+                <div class="col-sm-10 order-12 order-sm-1">
+                    <div class="container">
+                        <h5 class="mt-2">Alex Toussaint</h5>
+                        {% for title, name in posts %}
+                            {{title}}: {{name}}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-sm-2 order-1 order-sm-12">
+                    {% include "./nav.html" %}
+                </div>
+            </div>
+        </div>
+        {% include "./matomo.html" %}
+    </body>
+</html>
