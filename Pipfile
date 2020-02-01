@@ -7,9 +7,11 @@ verify_ssl = true
 
 [packages]
 jinja2 = "*"
-python-markdown2 = "*"
-markdown2 = "*"
-black = "*"
+markdown = "*"
+black = "==19.3b0"
+neovim = "*"
+jedi = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.6"
