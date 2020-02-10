@@ -1,6 +1,18 @@
 import os
+import yaml
 from jinja2 import Environment, FileSystemLoader
 import markdown
+
+
+def get_article_env(filename):
+    meta = "" 
+    with open(filename, "r") as f:
+        for line in f.lines():
+            if line.startswith("-"):
+                break
+            meta += line
+    return yaml.load(meta)
+
 
 file_loader = FileSystemLoader(".")
 env = Environment(loader=file_loader)
@@ -10,7 +22,7 @@ os.system("cp -r images build/images")
 
 # On fait les pages normales
 for filename in os.listdir("."):
-    if filename.endswith(".html"):
+    if filename.endswith(".html") and filename != "post-base.html":
         with open("build/" + filename, "w") as f:
             f.write(env.get_template(filename).render())
             print("Built " + filename)
@@ -27,7 +39,7 @@ for filename in os.listdir("posts"):
             "subject": subject,
             "url": filename.replace("md", "html"),
             "filename": filename,
-        }
+        }.update(get_article_env(filename))
     )
 print(posts)
 
@@ -43,5 +55,6 @@ for post in posts:
     with open("build/" + post["filename"].replace("md", "html"), "w") as f:
         with open("posts/" + post["filename"], "r") as f_source:
             html = markdown.markdown(f_source.read())
-            f.write(env.get_template("post-base.html").render(post=html))
+            f.write(env.get_template("post-base.html").render(
+                post=html, env=post))
         print("Built " + post["filename"])

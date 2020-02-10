@@ -12,6 +12,7 @@ black = "==19.3b0"
 neovim = "*"
 jedi = "*"
 flake8 = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.6"

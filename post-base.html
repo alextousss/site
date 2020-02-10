@@ -1,38 +1,25 @@
-<!doctype html>
-<html lang="en">
-    {% include "./head.html" %}
-    <body>
-        <div class="container-fluid mt-3"> 
-            <div class="row">
-                <div class="col-sm-10 order-12 order-sm-1">
-                    <div class="container">
-                        <h5 class="mt-2">Alex Toussaint</h5>
-                        <div class="mt-5" style="max-width: 50ch">
-                            {{ post|safe }}
-                        </div>
-                        <div class="ml-form-embed"
-                             data-account="1863036:s5j5r0a3y7"
-                             data-form="1751676:g2b8d7">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2 order-1 order-sm-12">
-                    {% include "./nav.html" %}
-                </div>
-            </div>
-        </div>
-        {% include "./matomo.html" %}
-        <!-- MailerLite Universal -->
-        <script>
-            (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-                var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-                f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-                var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-                _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+{% extends "base.html" %}
+{% block content %}
+<div class="mt-5" style="max-width: 50ch">
+    {{ post|safe }}
+</div>
+{% endblock %}
+{% block title %}
+{{ env.title }}
+{% endblock %}
+<div class="ml-form-embed"
+     data-account="1863036:s5j5r0a3y7"
+     data-form="1751676:g2b8d7">
+</div>
 
-            var ml_account = ml('accounts', '1863036', 's5j5r0a3y7', 'load');
-        </script>
-        <!-- End MailerLite Universal -->
+{% block scripts %}
+<script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+        var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+        f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+        var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+        _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
 
-    </body>
-</html>
+    var ml_account = ml('accounts', '1863036', 's5j5r0a3y7', 'load');
+</script>
+{% endblock %}
