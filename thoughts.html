@@ -1,7 +1,14 @@
 {% extends "base.html" %}
+{% block title %}
+Thoughts
+{% endblock %}
 
+{% block content %}
 <div class="mt-5">
     {% for post in posts %}
     {{post.date}}&nbsp;&nbsp;<a href="{{ post.url }}">{{ post.subject|capitalize }}</a>
+    <br/>
     {%- endfor %}
+
 </div>
+{% endblock %}

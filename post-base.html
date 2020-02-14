@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="mt-5" style="max-width: 50ch">
+
+<style>
+    p, h1, h2, h3, h4, h5, h6 {
+        max-width: 53ch;
+    }   
+</style>
+<div class="mt-5" style="max-width: 53ch;">
     {{ post|safe }}
 </div>
 {% endblock %}
 {% block title %}
 {{ env.title }}
+{% endblock %}
+{% block description %}
+{{ env.description }}
 {% endblock %}
 <div class="ml-form-embed"
      data-account="1863036:s5j5r0a3y7"

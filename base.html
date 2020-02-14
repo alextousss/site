@@ -9,10 +9,19 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+        <meta name="description" content="{% block description %}{% endblock %}"/>
         <title>{% block title %}{% endblock %} - Alex Toussaint</title>
+    
+    
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 1rem; !important 
+        }
+    </style>
+    
     </head>
     {% endblock %}
-    <body>
+    <body >
         <div class="container-fluid mt-3"> 
             <div class="row">
                 <div class="col-sm-10 order-12 order-sm-1">
