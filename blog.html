@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %} Blog {% endblock %} {% block
+content %}
+<div class="container">
+    <div class="mt-5">
+        {% for post in posts %} {{post.date}}&nbsp;&nbsp;<a
+            href="{{ post.url }}"
+            >{{ post.subject }}</a
+        >
+        <br />
+        {%- endfor %}
+    </div>
+</div>
+{% endblock %}

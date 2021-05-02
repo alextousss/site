@@ -1,0 +1,12 @@
+body {
+    font-size: 1.15rem;
+    /*font-family:  Verdana, sans-serif;*/
+    line-height: 1.725rem;
+    /*background-image: url("/images/ballon.png");*/
+}
+
+.post img {
+    max-width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}

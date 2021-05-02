@@ -1,34 +1,61 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <style>
-    p, h1, h2, h3, h4, h5, h6 {
-        max-width: 53ch;
-    }   
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    }
 </style>
-<div class="mt-5" style="max-width: 53ch;">
-    {{ post|safe }}
+<div class="container">
+    <div class="row no-gutters">
+        <div class="mt-5 col-sm-7 mx-auto post" style="">
+            {{ post|safe }}
+        </div>
+    </div>
 </div>
-{% endblock %}
-{% block title %}
-{{ env.title }}
-{% endblock %}
-{% block description %}
-{{ env.description }}
-{% endblock %}
-<div class="ml-form-embed"
-     data-account="1863036:s5j5r0a3y7"
-     data-form="1751676:g2b8d7">
-</div>
-
+{% endblock %} {% block title %} {{ env.title }} {% endblock %} {% block
+description %} {{ env.description }} {% endblock %}
+<div
+    class="ml-form-embed"
+    data-account="1863036:s5j5r0a3y7"
+    data-form="1751676:g2b8d7"
+></div>
 {% block scripts %}
 <script>
-    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-        var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-        f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-        var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-        _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+    (function (m, a, i, l, e, r) {
+        m["MailerLiteObject"] = e;
+        function f() {
+            var c = { a: arguments, q: [] };
+            var r = this.push(c);
+            return "number" != typeof r ? r : f.bind(c.q);
+        }
+        f.q = f.q || [];
+        m[e] = m[e] || f.bind(f.q);
+        m[e].q = m[e].q || f.q;
+        r = a.createElement(i);
+        var _ = a.getElementsByTagName(i)[0];
+        r.async = 1;
+        r.src = l + "?v" + ~~(new Date().getTime() / 1000000);
+        _.parentNode.insertBefore(r, _);
+    })(
+        window,
+        document,
+        "script",
+        "https://static.mailerlite.com/js/universal.js",
+        "ml"
+    );
 
-    var ml_account = ml('accounts', '1863036', 's5j5r0a3y7', 'load');
+    var ml_account = ml("accounts", "1863036", "s5j5r0a3y7", "load");
+</script>
+<script
+    type="text/javascript"
+    src="https://unpkg.com/medium-zoom@1.0.4/dist/medium-zoom.min.js"
+></script>
+<script type="text/javascript">
+    mediumZoom("img");
 </script>
 {% endblock %}

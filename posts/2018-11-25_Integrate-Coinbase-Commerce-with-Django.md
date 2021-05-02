@@ -10,7 +10,7 @@ I fixed a few typos at the same time.
  
 I’m quickly going to show you how to integrate Coinbase Commerce with Django.
 
-There won’t be any bullshit and I will assume you have a basic knowledge of Django. I won’t be cover any front-end thing.
+There won’t be any bullshit and I will assume you have a basic knowledge of Django. I won’t cover any front-end thing.
 
 **We’ll do it in two parts :**
 
@@ -21,9 +21,7 @@ There won’t be any bullshit and I will assume you have a basic knowledge of Dj
 ### What is the typical Coinbase Commerce paying process?
 
 **1 — Your client is on your website, and clicks the “pay with crypto” button.**
-<div class="scroll-horizon">
 ![You know … That little button that feels so good](../images/paywithcryptobutton.png)
-</div>
 
 *You know … That little button that feels so good*
 
@@ -121,8 +119,8 @@ Alex Toussaint
         max-width: 500%;
     }
     .scroll-horizon {
-          white-space: nowrap;
-        overflow-x: scroll; 
+        white-space: nowrap;
+        overflow-x: auto; 
         overflow-y: hidden; 
     }
     .scroll-horizon img {

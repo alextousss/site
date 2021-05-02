@@ -1,17 +1,17 @@
 title: "How To Build Apps Pragmatically"
 -------------------------------
-Recently, started I meta-analyzing how I build apps. I thought of best practices to ensure performance, user experience and quick development.
+Recently, I started meta-analyzing how I build apps. I thought of best practices to ensure performance, user experience and quick development.
 Here's what I found out:
-##### Use Popular Tools
+## Use Popular Tools
 This one's controversial. 
 But, you can't afford to waste time googling and opening Github issues. 
 That's the reason why I use React and Django: both are tools with communities of millions and I never face problems with the language/framework itself: someone has done it for me before. 
 
-##### Old Doesn't Mean Gold
+## Old Doesn't Mean Gold
 
 Try to build a complex server-rendered web app with PHP because "It's more inclusive" or "it has better frontend performance". See you in 2030.
 
-##### Use the Right Tool
+## Use the Right Tool
 
 Chose a tool because it's the right one - not because it's cool, users don't care whether the tech stack's cool.
 
@@ -20,24 +20,24 @@ Blogs using Javascript frameworks, I'm looking at you ;-)
 If you're doing an app for developers, they'll prefer a CLI to a web app anyway.
 
 
-##### Don't Duplicate Code
+## Don't Duplicate Code
 
 That helps to shrink complexity.
 Try to regroup code that is always doing the same thing into a library with a clear interface.
 For instance, all my web apps use the same extended fetching library that implements JWT authentication and pops up a warning whenever the backend receives an error code.
 
-##### The Server and the Client Should not Mutate the Same Fields
+## The Server and the Client Should not Mutate the Same Fields
 
 It avoids errors from managing locks and synchronization mechanisms. 
 If a background job can change some fields, note them as such and send them as read-only to the client. 
 The client should only change "requested modifications" fields so that the background job does all the mutations.
 
-##### Use Watcher Views
+## Use Watcher Views
 These are views that tell you when a model changed last. Watcher Views are light enough so that you can continuously call them to know whether you should fetch recent data. 
 They're far less complex than WebSockets and avoid the performance costs of continuously polling unchanged data from the API.
 
 
-##### Prefer Exposed to Hidden Complexity
+## Prefer Exposed to Hidden Complexity
 
 Some solutions (e.g. serverless) promise you a short-term boost of productivity by not having to manage certain things. 
 If you know that you will never have to manage these things, great! 
@@ -50,7 +50,7 @@ Obsess to minimize complexity: it's a balance to find.
 You need to think of the future. To design your app's data model so that you can support new features without changing it. 
 It's not about adding more fields to your models, that would be increasing complexity: it's about adding more general and powerful fields. 
 -->
-##### Never Fit a Square Peg in a Round Hole
+## Never Fit a Square Peg in a Round Hole
 At Kaktana, we use nested Django models to represent a bot's trigger conditions. 
 That's stupid! There's no point to storing function calls in a relational database: it is inefficient and complex. Whenever I want to add a microservice that needs to treat that state, I have to spend hours just building the JSON serializer.
 

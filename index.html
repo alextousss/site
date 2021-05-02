@@ -1,7 +1,76 @@
-{% extends "base.html" %}                        
-{% block title %}
-Home
-{% endblock %}
-{% block content %}
-Intentionally left blank
+{% extends "base.html" %} {% block title %} About {% endblock %} {% block
+content %}
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row no-gutters">
+        <div class="col-sm-3 nopadding">
+            <img src="images/pdp.jpg" class="img-fluid" />
+        </div>
+        <div class="col-sm-3 nopadding">
+            <img src="images/balon.jpg" class="img-fluid" />
+        </div>
+        <div class="col-sm-3 nopadding">
+            <img src="/images/teapot.png" class="img-fluid" />
+        </div>
+        <div class="col-sm-3 nopadding">
+            <img src="/images/wave-sim.png" class="img-fluid" />
+        </div>
+        <div class="col-12 mt-sm-5"></div>
+        <div class="col-sm-3">
+            <img src="/images/TIPE/beamquiwork2.gif" class="img-fluid" />
+        </div>
+        <div class="col-sm-5">
+            <img src="/images/TIPE/3drenderingofpcb.png" class="img-fluid" />
+        </div>
+        <div class="col-sm-4">
+            <img src="/images/TIPE/oiseaudeloin.jpg" class="img-fluid" />
+        </div>
+        <br />
+        <div class="col-12">
+            <center>
+                <figcaption class="figure-caption text-center">
+                    Click any image to zoom
+                </figcaption>
+            </center>
+        </div>
+        <div class="col-12 mt-sm-5"></div>
+        <div class="col-12">
+            I'm 19 years old and live near Paris. <br />
+            I've co-founded <a href="https://kaktana.com">kaktana.com</a>, built
+            software and hardware <a href="projects.html">projects</a> and done
+            freelance work on custom trading bots for cryptocurrencies.<br />
+            I'm currently a student at Jean Baptiste Say, a french
+            <a href="https://www.sieben.fr/2014/01/02/prepa/"
+                >preparatory class</a
+            >
+            <br /><br />
+
+            <p class="h5">Find Me</p>
+            Email:
+            <a href="mailto:me@alextoussaint.com">me@alextoussaint.com</a><br />
+            Github: <a href="https://github.com/alextousss">alextousss</a>
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+<style>
+    .nopadding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>
+
+{% endblock %} {% block scripts %}
+<script
+    type="text/javascript"
+    src="https://unpkg.com/medium-zoom@1.0.4/dist/medium-zoom.min.js"
+></script>
+<script type="text/javascript">
+    mediumZoom("img");
+</script>
+
 {% endblock %}
