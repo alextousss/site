@@ -3,6 +3,8 @@ import yaml
 from jinja2 import Environment, FileSystemLoader
 import markdown
 import markdown_katex
+import datetime
+import PyRSS2Gen as RSS2
 
 
 def get_article_env(filename):
@@ -45,6 +47,7 @@ for filename in os.listdir("."):
 
 # On fait la liste des posts
 posts = []
+rss_items = []
 for filename in os.listdir("posts"):
     date = filename.split("_")[0]
     subject = filename.split("_")[1].split(".")[0].replace("-", " ")
@@ -54,6 +57,7 @@ for filename in os.listdir("posts"):
         "url": filename.replace("md", "html"),
         "filename": filename,
     }
+
     meta = get_article_env("posts/" + filename)
     if meta is not None:
         post.update(meta)
@@ -63,6 +67,15 @@ for filename in os.listdir("posts"):
             continue
     except Exception:
         pass
+    print(date)
+    rss_items.append(
+        RSS2.RSSItem(
+            title=subject,
+            link="https://alextoussaint.com/posts/" + filename,
+            description=meta["description"],
+            pubDate=datetime.datetime.strptime(date, "%Y-%m-%d"),
+        )
+    )
     posts.append(post)
 
 posts.sort(key=lambda post: post["date"])
@@ -85,3 +98,13 @@ for post in posts:
             )
             f.write(env.get_template("post-base.html").render(post=html, env=post))
         print("Built " + post["filename"])
+
+rss = RSS2.RSS2(
+    title="Alex Toussaint's feed",
+    link="alextoussaint.com",
+    description="Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it... Once you learn that, you'll never be the same again. -- Steve Jobs ",
+    lastBuildDate=datetime.datetime.now(),
+    items=rss_items,
+)
+
+rss.write_xml(open("build/feed.xml", "w"))

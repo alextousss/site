@@ -14,6 +14,7 @@ jedi = "*"
 flake8 = "*"
 pyyaml = "*"
 markdown-katex = "*"
+pyrss2gen = "*"
 
 [requires]
 python_version = "3.8"

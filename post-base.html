@@ -14,17 +14,16 @@
     <div class="row no-gutters">
         <div class="mt-5 col-sm-7 mx-auto post" style="">
             {{ post|safe }}
+            <div
+                class="ml-form-embed"
+                data-account="1863036:s5j5r0a3y7"
+                data-form="1751676:g2b8d7"
+            ></div>
         </div>
     </div>
 </div>
 {% endblock %} {% block title %} {{ env.title }} {% endblock %} {% block
-description %} {{ env.description }} {% endblock %}
-<div
-    class="ml-form-embed"
-    data-account="1863036:s5j5r0a3y7"
-    data-form="1751676:g2b8d7"
-></div>
-{% block scripts %}
+description %} {{ env.description }} {% endblock %} {% block scripts %}
 <script>
     (function (m, a, i, l, e, r) {
         m["MailerLiteObject"] = e;

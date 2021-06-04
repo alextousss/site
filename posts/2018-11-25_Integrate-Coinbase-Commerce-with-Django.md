@@ -10,7 +10,7 @@ I fixed a few typos at the same time.
  
 I’m quickly going to show you how to integrate Coinbase Commerce with Django.
 
-There won’t be any bullshit and I will assume you have a basic knowledge of Django. I won’t cover any front-end thing.
+I will assume you have a basic knowledge of Django. I won’t cover any front-end thing.
 
 **We’ll do it in two parts :**
 

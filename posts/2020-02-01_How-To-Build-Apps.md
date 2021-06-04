@@ -1,4 +1,5 @@
 title: "How To Build Apps Pragmatically"
+description: Recently, I started meta-analyzing how I build apps. I thought of best practices to ensure performance, user experience and quick development. Here's what I found out.
 -------------------------------
 Recently, I started meta-analyzing how I build apps. I thought of best practices to ensure performance, user experience and quick development.
 Here's what I found out:
