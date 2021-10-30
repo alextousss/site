@@ -71,7 +71,7 @@ for filename in os.listdir("posts"):
     rss_items.append(
         RSS2.RSSItem(
             title=subject,
-            link="https://alextoussaint.com/posts/" + filename,
+            link="https://alextoussaint.com/" + filename.replace("md", "html"),
             description=meta["description"],
             pubDate=datetime.datetime.strptime(date, "%Y-%m-%d"),
         )
