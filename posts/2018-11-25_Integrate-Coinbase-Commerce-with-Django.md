@@ -21,32 +21,31 @@ I will assume you have a basic knowledge of Django. I won’t cover any front-en
 ### What is the typical Coinbase Commerce paying process?
 
 **1 — Your client is on your website, and clicks the “pay with crypto” button.**
-![You know … That little button that feels so good](../images/paywithcryptobutton.png)
+![button to pay with crypto](../images/paywithcryptobutton.png)
 
-*You know … That little button that feels so good*
 
 Congratulations! You’re about to gain money!
 
-Bam! The user clicks and a nice modal is showed to him (Which you didn’t make, otherwise it wouldn’t be that beautiful you little backend developer)
+The user clicks and a dialog is showed to him (Which you didn’t make, otherwise it wouldn’t be that beautiful)
 
 ![Paying with BTC on Coinbase Commerce](images/payingwithbtconcoibase.png)
 
 
 *Paying with BTC on Coinbase Commerce*
 
-After giving some optional infos (optional, you can configure it on your Coinbase Commerce Account) he’ll be prompted with this, to tell him to pay your beloved product.
+After giving some optional infos (you can configure them on your Coinbase Commerce Account) your user will be prompted with this, to tell him to pay your beloved product.
 
 He then pays it, and gets on his email address a code, his order code.
 
 He then needs to send you his code so that you can be sure that he’s a legit customer.
 
-But because no one wants to pay someone just to confirm orders, we’re going to automate all of that with a nice little webhook and a nice little form.
+But because no one wants to pay someone just to confirm orders, we’re going to automate all of that with a webhook and a form.
 
 **2 — Coinbase Commerce notifies you that you’re getting richer by sending you a webhook POST request.**
 
 You’ll need to configure it in the Coinbase Commerce UI, and we’re going to learn how to create it in the present tutorial.
 
-This request contains some very interesting things :
+This request contains some very interesting things:
 
 * An order ID, the same that has been communicated by mail to your customer, that you’ll need to save on your database
 
@@ -56,7 +55,7 @@ We’re going to store it.
 
 **3 — Your client claims his product with a form on your website**
 
-You know how to handle a form with Django, otherwise you have nothing to do here.
+I'll assume you already know how to handle a form with Django.
 
 ![My button looks like that](images/myconfirmpaymentbutton.png) 
 
@@ -81,7 +80,7 @@ Then, we’re going to setup that webhook. Let’s tap into the urls first:
 
 <script src="https://gist.github.com/alextousss/181fc6a5f5e32d75fbee431ec569fcd9.js"></script>
 
-And here’s for the godly webhook!
+And here’s for the webhook.
 I’m assuming you have a COINBASE_SECRET field in your settings.py file.
 
 <script src="https://gist.github.com/alextousss/1461fadb068e8b25eb121e1b00bf1a67.js"></script>
@@ -110,7 +109,6 @@ It’s a 100% user-configurable, technical analysis and cloud-based trading bot 
 Cryptocurrency is the future! 
 We’re going to get rid of bank monopolies and get rid of those stupid fees. Just enjoy getting paid so easily!
 
-*You can also give a look at my awesome open-source contributions at [https://github.com/alextousss/](https://github.com/alextousss/)*
 
 Alex Toussaint
 
