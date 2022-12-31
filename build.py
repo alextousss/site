@@ -83,7 +83,7 @@ posts.reverse()
 print(posts)
 # On fait la page d'acceuil des posts
 with open("build/blog.html", "w") as f:
-    string = env.get_template("blog.html").render(posts=posts)
+    string = env.get_template("blog.html").render(posts=[posts[0]])
     f.write(string)
     print("Built blog.html")
 

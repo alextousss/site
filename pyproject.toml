@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "site"
+version = "0.1.0"
+description = ""
+authors = ["alex <alex.toussaint@student-cs.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Jinja2 = "^3.1.2"
+Markdown = "^3.4.1"
+jedi = "^0.18.2"
+PyYAML = "^6.0"
+markdown-katex = "^202112.1034"
+PyRSS2Gen = "^1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
