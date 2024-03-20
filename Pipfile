@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 jinja2 = "*"
 markdown = "*"
-black = "==19.3b0"
+black = "==24.3.0"
 neovim = "*"
 jedi = "*"
 flake8 = "*"
